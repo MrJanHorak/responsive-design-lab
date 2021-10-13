@@ -22,5 +22,215 @@ body {
 /* Use a system font, if none are available use an available sans-sarif   font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  margin: 0;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: auto;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+        "header"
+        "main"
+        "#ratings"
+        "addInfo"
+        "footer";
+}
+
+header {
+
+    background-color: white;
+    padding: 15px 15px 15px;
+    color: #E7E7E7;
+    font-size: large;
+    text-align: right;
+  }
+
+  header > div {
+      margin: auto;
+      display: flex;
+      justify-content: center; 
+  }
+
+header >div > img
+    {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: solid 4px #66D287;      
+    }
+
+    
+main {
+      background-color: white;
+    }
+    
+    
+footer {
+      background-color:#66D287;
+      display: flex;
+      flex-direction: row;
+      height: 75px;
+
+    }
+    
+footer > div > img 
+    {
+      width: auto;
+      height: 50px;
+    }
+#messaging 
+    {
+      text-align: center;
+      background-color: #5CBB7A ;
+      padding: 12px;
+      width: 50%;
+    }
+
+#call 
+  {
+    text-align: center;
+    display: block;
+    padding: 12px;
+    width: 50%
+  }
+
+#ratings 
+  {
+    background-color: #F3F3F3;
+    text-align: center;
+    padding:10px 0px 0px 0px;
+    line-height: 121%;
+}
+
+#addInfo {
+  border-left: bold #6BB97F;
+  display:none;
+}
+
+#name {
+  text-align: center;
+}
+
+#cost {
+  padding: 10px;
+  background-color: white;
+}
+
+h1 {
+  color: black;
+}
+h2{
+  font-weight: normal;
+  font-size: large;
+  color: black;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    grid-template-columns: 225px 375px;
+    grid-template-rows: 225px 75px;
+    grid-template-areas: "header main"
+                          "footer #cost";
+  }
+
+  header {
+    background-color: white;
+    padding: 15px 15px 15px;
+    color: #E7E7E7;
+    font-size: large;
+    text-align: left;
+    height: 250px;
+  }
+
+  header > div {
+      padding: 10px;
+      margin: auto;
+      display: flex;
+      justify-content: center; 
+  }
+
+header >div > img
+    {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: solid 4px #66D287;      
+    }
+
+main {
+      background-color: #F3F3F3;
+      height: 300px;
+    }
+    
+footer {
+      background-color:#66D287;
+      display: flex;
+      flex-direction: row;
+      height: 75px;
+
+    }
+    
+footer > div > img 
+    {
+      width: auto;
+      height: 50px;
+    }
+#messaging 
+    {
+      text-align: center;
+      background-color: #5CBB7A ;
+      padding: 12px;
+      width: 50%;
+    }
+
+#call 
+  {
+    text-align: center;
+    display: block;
+    padding: 12px;
+    width: 50%
+  }
+
+#ratings 
+  {
+    background-color: #F3F3F3;
+    text-align: left;
+    margin: 15px;
+  }
+
+#addInfo {
+  text-align: left;
+  border-left: bold 7px #6BB97F;
+  display:inline-block;
+  margin-left: 15px;
+  font-size: large;
+  line-height: normal;
+  font-weight: lighter;
+}
+
+#name {
+  text-align: left;
+  margin: 15px;
+}
+
+#cost {
+  padding: 10px;
+  background-color: #F3F3F3;
+  text-align: left;
+
+}
+
+h1 {
+  color: black;
+  font-size: x-large;
+}
+h2{
+  font-weight: Normal;
+  font-size: Normal;
+  color: black;
+}
+
+
+
+
 }
