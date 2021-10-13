@@ -157,10 +157,11 @@ header >div > img
     }
 
 main {
-  margin-top: 60px;
+      margin-top: 60px;
       background-color: #F3F3F3;
       height: 315px;
       width: 375px;
+      padding-top: 20px;
     }
     
 footer {
@@ -197,8 +198,9 @@ footer > div > img
     background-color: #F3F3F3;
     text-align: left;
     margin-left: 15px;
-    margin-top: -12px;
+    margin-top: -25px;
     width: 360px;
+    font-size: large;
   }
 
 #addInfo {
@@ -226,6 +228,8 @@ footer > div > img
   height: 83px;
   width: 360px;
   margin-left: -7px;
+  line-height: 10px;
+  padding-top: 15px;
 }
 
 h1 {
