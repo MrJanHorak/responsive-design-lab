@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box
-}
+  }
 
 /* The Universal Selector */
 *, /* All elements*/
@@ -9,13 +9,13 @@ html {
   /* height & width will now include border & padding by default
      but can be over-ridden as needed */
   box-sizing: inherit;
-}
+  }
 
 /* resets font size to be 62.5% of the user preference - 
    in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%
-}
+  }
 
 body {
   background-color: gray;
@@ -28,79 +28,80 @@ body {
   display: grid;
   grid-template-columns: 300px;
   grid-template-rows: auto;
-  grid-template-areas: 
-        "header"
-        "main"
-        "#ratings"
-        "addInfo"
-        "footer";
-}
-
-header {
-
-    background-color: white;
-    padding: 15px 15px 15px;
-    color: #E7E7E7;
-    font-size: large;
-    text-align: right;
   }
 
-  header > div {
-      margin: auto;
-      display: flex;
-      justify-content: center; 
+header {
+  background-color: white;
+  color: #E7E7E7;
+  font-size: large;
+  text-align: right;
+  }
+
+main {
+  background-color: white;
+  }
+
+h1 {
+  color: black;
+  }
+
+h2{
+  font-weight: normal;
+  font-size: large;
+  color: black;
+  }
+  
+footer 
+  {
+  background-color:#66D287;
+  display: flex;
+  flex-direction: row;
+  height: 75px;
+  }
+
+header > div 
+  {
+  display: flex;
+  justify-content: center; 
   }
 
 header >div > img
-    {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: solid 4px #66D287;      
-    }
+  {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: solid 4px #66D287;      
+  }
 
-    
-main {
-      background-color: white;
-    }
-    
-    
-footer {
-      background-color:#66D287;
-      display: flex;
-      flex-direction: row;
-      height: 75px;
-
-    }
-    
 footer > div > img 
-    {
-      width: auto;
-      height: 50px;
-    }
+  {
+  width: auto;
+  height: 50px;
+  }
+
 #messaging 
-    {
-      text-align: center;
-      background-color: #5CBB7A ;
-      padding: 12px;
-      width: 50%;
-    }
+  {
+  text-align: center;
+  background-color: #5CBB7A ;
+  padding: 12px;
+  width: 50%;
+  }
 
 #call 
   {
-    text-align: center;
-    display: block;
-    padding: 12px;
-    width: 50%
+  text-align: center;
+  display: block;
+  padding: 12px;
+  width: 50%
   }
 
 #ratings 
   {
-    background-color: #F3F3F3;
-    text-align: center;
-    padding:10px 0px 0px 0px;
-    line-height: 121%;
-}
+  background-color: #F3F3F3;
+  text-align: center;
+  padding:10px 0px 10px 0px;
+  line-height: 121%;
+  }
 
 #addInfo {
   border-left: bold #6BB97F;
@@ -109,140 +110,132 @@ footer > div > img
 
 #name {
   text-align: center;
-}
-
-#cost {
-  padding: 10px;
-  background-color: white;
-}
-
-h1 {
-  color: black;
-}
-h2{
-  font-weight: normal;
-  font-size: large;
-  color: black;
-}
-
-@media only screen and (min-width: 600px) {
-  body {
-    grid-template-columns: 225px 375px;
-    grid-template-rows: 225px 75px;
-    grid-template-areas: "header main"
-                          "footer #cost";
   }
 
-  header {
+#cost {
+  text-align: center;
+  line-height: 10px;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+
+#status {
+  margin-top: 10px;
+  margin-left: 65%;
+  }
+
+@media only screen and (min-width: 600px) {
+  body 
+    {
+    margin: 9px auto;
+    width: 600px;
+    grid-template-columns: 43%  57%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "header main"
+                        "footer cost";
+    }
+
+  header 
+    {
     background-color: white;
     color: #E7E7E7;
     font-size: large;
     text-align: left;
-    height: 250px;
-    width: 225px;
-  }
-
-  header > div {
-      margin: auto;
-      display: flex;
-      justify-content: center; 
-  }
-
-header >div > img
-    {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: solid 4px #66D287;      
+    width: 100%;
+    height: 100%;
+    grid-area: header;
+    }
+  
+  h1 {
+    color: black;
+    font-size: x-large;
+    margin-top: 6px;
+    margin-bottom: -15px;
     }
 
-main {
-      margin-top: 60px;
-      background-color: #F3F3F3;
-      height: 315px;
-      width: 375px;
-      padding-top: 20px;
+  h2{
+    font-weight: Normal;
+    font-size: Normal;
+    color: black;
+    }
+  
+  main {
+    background-color: #F3F3F3;
+    grid-area: main;
     }
     
-footer {
-      background-color:#66D287;
-      display: flex;
-      flex-direction: row;
-      height: 75px;
+  footer {
+    background-color:#66D287;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    grid-area: footer;
+    }
+
+  header >div > img
+    {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: solid 4px #66D287;      
     }
     
-footer > div > img 
+    footer > div > img 
     {
-      width: auto;
-      height: 50px;
+    width: auto;
     }
-
-#messaging 
+    
+    #call 
     {
-      text-align: center;
-      background-color: #5CBB7A ;
-      padding: 12px;
-      width: 50%;
-    }
-
-#call 
-  {
-    text-align: center;
-    display: block;
-    padding: 12px;
+    padding-top: 19px;
     width: 50%
-  }
+    }
+    
+    #messaging 
+    {
+    background-color: #5CBB7A ;
+    padding-top: 19px;
+    width: 50%;
+    }
 
-#ratings 
-  {
+  #ratings 
+    {
     background-color: #F3F3F3;
     text-align: left;
     margin-left: 15px;
-    margin-top: -25px;
-    width: 360px;
     font-size: large;
-  }
+    }
 
-#addInfo {
-  text-align: left;
-  display:inline-block;
-  margin-left: 0 px;
-  padding-left: 9px;
-  font-size: large;
-  line-height: normal;
-  font-weight: lighter;
-  width: 360px;
-  border-left: 3px solid #6BB97F;
-}
+  #addInfo {
+    text-align: left;
+    display:flex;
+    padding-left: 13px;
+    border-left: 3px solid #6BB97F;
+    font-size: large;
+    line-height: normal;
+    font-weight: lighter;
+    }
 
-#name {
-  text-align: left;
-  margin-left: 15px;
-  width: 375px;
-}
+  #name {
+    text-align: left;
+    margin-left: 20px;
+    padding-top: 25px;
+    }
 
-#cost {
-  margin: 0 0 0 0px;
-  background-color: #F3F3F3;
-  text-align: left;
-  height: 83px;
-  width: 360px;
-  margin-left: -7px;
-  line-height: 10px;
-  padding-top: 15px;
-}
+  #cost {
+    background-color: #F3F3F3;
+    text-align: left;
+    grid-area: cost;
+    padding-left: 20px;
+    height: 100%;
+    line-height: 25px;
+    }
 
-h1 {
-  color: black;
-  font-size: x-large;
-}
-h2{
-  font-weight: Normal;
-  font-size: Normal;
-  color: black;
-}
-
-
-
+  #status {
+    margin-top: 5px;
+    margin-right: 70%;
+    margin-left: 10px;
+    }
 
 }
